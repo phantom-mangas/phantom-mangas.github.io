@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One Piece BR</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="./assets/pngeg1g.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./lista-manga.html">Mangá</a></li>
+                                <li><a href="#">SBS</a></li>
+                                <li><a href="#">Teorias</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="./login.html" onclick="desconectarDoFirebase()"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Begin -->
+    <!-- <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./categories.html">Categories</a>
+                        <span>Romance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Breadcrumb End -->
+
+    <!-- Anime Section Begin -->
+    <section class="anime-details spad">
+        <div class="container">
+            <div class="anime__details__content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="anime__details__pic set-bg" data-setbg="img/op-img-edit.jpeg">
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="anime__details__text">
+                            <div class="container mt-5">
+                                <ul class="nav nav-tabs" id="myTabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="tab1" data-toggle="tab"
+                                            href="#content1">Mangá</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="tab2" data-toggle="tab" href="#content2">SBS</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" id="tab3" data-toggle="tab" href="#content3">Teoria</a>
+                                    </li> -->
+                                </ul>
+
+                                <div class="tab-content mt-2">
+                                    <div class="tab-pane fade show active" id="content1">
+                                        <div class="container mt-5">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <button class="btn btn-primary btn-block"
+                                                        onclick="mostrarFormulario('edicao')">Editar</button>
+                                                    <div id="formularioEdicao" style="display: none;">
+                                                        <!-- Formulário de Edição -->
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="campoEdicao">Campo de Edição:</label>
+                                                                <input type="text" class="form-control" id="campoEdicao"
+                                                                    placeholder="Digite aqui">
+                                                            </div>
+                                                            <!-- Adicione outros campos conforme necessário para a edição -->
+                                                            <button type="submit" class="btn btn-primary">Salvar
+                                                                Edição</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <button class="btn btn-success btn-block"
+                                                        onclick="mostrarFormulario('criacao')">Criar</button><br><br>
+                                                    <div id="formularioCriacao" style="display: none;">
+                                                        <!-- Formulário de Criação -->
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="campoCriacao" style="color: white;">Número do capitulo</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="num-cap" placeholder="Número do capitulo">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="campoCriacao" style="color: white;">Título do capitulo</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="imput-titulo" placeholder="Título do capitulo">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="campoCriacao" style="color: white;">Páginas do capitulo</label>
+                                                                <input type="file" class="form-control-file" id="inputImagens" multiple style="display:none">
+                                                                <button type="button" class="btn btn-primary" onclick="document.getElementById('inputImagens').click()">Selecionar Imagens</button>
+                                                            </div>
+                                                            <!-- Adicione outros campos conforme necessário para a criação -->
+                                                            <button type="button" class="btn btn-success" onclick="enviarDadosComImagens()">Salvar
+                                                                Criação</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="content2">
+                                        <div class="container mt-5">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <button class="btn btn-success btn-block"
+                                                        onclick="mostrarFormularioSBS('criacao')">Criar</button><br><br>
+                                                    <div id="formularioCriacaoSbs" style="display: none;">
+                                                        <!-- Formulário de Criação -->
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="campoCriacaoSbs" style="color: white;">Número do SBS</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="num-sbs" placeholder="Número do capitulo">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="campoCriacao" style="color: white;">Páginas do capitulo</label>
+                                                                <input type="file" class="form-control-file" id="inputImagensSbs" multiple style="display:none">
+                                                                <button type="button" class="btn btn-primary" onclick="document.getElementById('inputImagensSbs').click()">Selecionar Imagens</button>
+                                                            </div>
+                                                            <!-- Adicione outros campos conforme necessário para a criação -->
+                                                            <button type="button" class="btn btn-success" onclick="enviarDadosSbsComImagens()">Salvar
+                                                                Criação</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="content3">
+                                        <p>Conteúdo da Aba 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-9"> -->
+                        <!-- <div class="anime__details__text">
+                            <div class="container mt-5">
+                                <ul class="nav nav-tabs" id="myTabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="tab1" data-toggle="tab"
+                                            href="#content1Review">Mangá</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="tab2" data-toggle="tab" href="#content2Review">SBS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="tab3" data-toggle="tab"
+                                            href="#content3Review">Teoria</a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content mt-2">
+                                    <div class="tab-pane fade show active" id="content1Review">
+                                        <div class="container mt-5">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="container mt-5">
+                                                        <h2 class="text-center mb-4">Lista de Capítulos</h2>
+
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">Capítulo 1: Título do Capítulo 1
+                                                            </li>
+                                                            <li class="list-group-item">Capítulo 2: Título do Capítulo 2
+                                                            </li>
+                                                            <li class="list-group-item">Capítulo 3: Título do Capítulo 3
+                                                            </li> -->
+                                                            <!-- Adicione mais itens conforme necessário -->
+                                                        <!-- </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="content2Review">
+                                        <p>Conteúdo da Aba 2</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="content3Review">
+                                        <p>Conteúdo da Aba 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+    </section>
+    <!-- Anime Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- <div class="footer__logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div> -->
+                </div>
+                <!-- <div class="col-lg-6">
+                <div class="footer__nav">
+                    <ul>
+                        <li class="active"><a href="./index.html">Homepage</a></li>
+                        <li><a href="./categories.html">Categories</a></li>
+                        <li><a href="./blog.html">Our Blog</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div> -->
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Inclua a biblioteca Bootstrap JavaScript no final do corpo para funcionalidade completa -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
